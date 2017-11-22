@@ -21,7 +21,7 @@ class WheelCurvedPicker extends Component {
     onValueChange: PropTypes.func,
     selectedValue: PropTypes.any,
     selectedIndex: PropTypes.number,
-    indicator: PropTypes.boolean,
+    indicator: PropTypes.bool,
     indicatorSize: PropTypes.number,
     indicatorColor: ColorPropType,
   };
