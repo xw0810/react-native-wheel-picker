@@ -33,7 +33,7 @@ public class ReactWheelCurvedPicker extends WheelPicker {
             public void onWheelSelected(int position) {
                 if (mValueData != null && position < mValueData.size()) {
                     mEventDispatcher.dispatchEvent(
-                            new ItemSelectedEvent(getId(), mValueData.get(position)));
+                            new ItemSelectedEvent(getId(), mValueData.get(position), position));
                 }
             }
 

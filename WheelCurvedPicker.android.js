@@ -63,13 +63,16 @@ class WheelCurvedPicker extends Component {
   };
 
   render() {
-    return <WheelCurvedPickerNative
-      {...this.props}
-      onValueChange={this._onValueChange}
-      data={this.state.items}
-      textColor={this.state.textColor}
-      textSize={this.state.textSize}
-      selectedIndex={parseInt(this.state.selectedIndex)}/>;
+    return (
+      <WheelCurvedPickerNative
+        {...this.props}
+        onValueChange={this._onValueChange}
+        data={this.state.items}
+        textColor={this.state.textColor}
+        textSize={this.state.textSize}
+        selectedIndex={parseInt(this.state.selectedIndex)}
+      />
+    );
   }
 }
 
