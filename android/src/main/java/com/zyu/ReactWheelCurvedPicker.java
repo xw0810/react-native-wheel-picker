@@ -58,10 +58,12 @@ class ItemSelectedEvent extends Event<ItemSelectedEvent> {
     public static final String EVENT_NAME = "wheelCurvedPickerPageSelected";
 
     private final int mValue;
+    private final int index;
 
-    protected ItemSelectedEvent(int viewTag,  int value) {
+    protected ItemSelectedEvent(int viewTag,  int value, int index) {
         super(viewTag);
-        mValue = value;
+        this.mValue = value;
+        this.index = index;
     }
 
     @Override
@@ -77,6 +79,7 @@ class ItemSelectedEvent extends Event<ItemSelectedEvent> {
     private WritableMap serializeEventData() {
         WritableMap eventData = Arguments.createMap();
         eventData.putInt("data", mValue);
+        eventData.putInt("index", index);
         return eventData;
     }
 }
