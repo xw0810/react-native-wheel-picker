@@ -18,6 +18,7 @@ public class ReactWheelCurvedPicker extends WheelPicker {
 
     private final EventDispatcher mEventDispatcher;
     private List<Integer> mValueData;
+    private int state = WheelPicker.SCROLL_STATE_IDLE;
 
     public ReactWheelCurvedPicker(ReactContext reactContext) {
         super(reactContext);
@@ -38,6 +39,7 @@ public class ReactWheelCurvedPicker extends WheelPicker {
 
             @Override
             public void onWheelScrollStateChanged(int state) {
+                ReactWheelCurvedPicker.this.state = state;
             }
         });
     }
@@ -46,6 +48,9 @@ public class ReactWheelCurvedPicker extends WheelPicker {
         mValueData = data;
     }
 
+    public int getState() {
+        return state;
+    }
 }
 
 class ItemSelectedEvent extends Event<ItemSelectedEvent> {
