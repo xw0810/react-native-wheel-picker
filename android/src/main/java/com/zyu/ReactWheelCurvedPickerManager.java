@@ -87,6 +87,27 @@ public class ReactWheelCurvedPickerManager extends SimpleViewManager<ReactWheelC
         }
     }
 
+    @ReactProp(name="indicator")
+    public void setIndicator(ReactWheelCurvedPicker picker, boolean indicator) {
+        if (picker != null) {
+            picker.setIndicator(indicator);
+        }
+    }
+
+    @ReactProp(name="indicatorSize")
+    public void setItemSpace(ReactWheelCurvedPicker picker, int indicatorSize) {
+        if (picker != null) {
+            picker.setIndicatorSize((int) PixelUtil.toPixelFromDIP(indicatorSize));
+        }
+    }
+
+    @ReactProp(name="indicatorColor", customType = "Color")
+    public void setIndicatorColor(ReactWheelCurvedPicker picker, Integer color) {
+        if (picker != null) {
+            picker.setIndicatorColor(color);
+        }
+    }
+
     @Override
     public String getName() {
         return REACT_CLASS;
