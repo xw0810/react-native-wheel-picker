@@ -108,6 +108,13 @@ public class ReactWheelCurvedPickerManager extends SimpleViewManager<ReactWheelC
         }
     }
 
+    @ReactProp(name="curve")
+    public void setCurve(ReactWheelCurvedPicker picker, boolean curve) {
+         if (picker != null) {
+              picker.setCurved(curve);
+         }
+    }
+
     @Override
     public String getName() {
         return REACT_CLASS;
