@@ -95,7 +95,7 @@ public class ReactWheelCurvedPickerManager extends SimpleViewManager<ReactWheelC
     }
 
     @ReactProp(name="indicatorSize")
-    public void setItemSpace(ReactWheelCurvedPicker picker, int indicatorSize) {
+    public void setIndicatorSize(ReactWheelCurvedPicker picker, int indicatorSize) {
         if (picker != null) {
             picker.setIndicatorSize((int) PixelUtil.toPixelFromDIP(indicatorSize));
         }
